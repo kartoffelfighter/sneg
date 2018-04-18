@@ -1,0 +1,63 @@
+/* sprinter */
+
+
+@media print {
+@page {
+    size: 21cm 29.7cm;
+    margin: 0;
+}
+
+
+body {
+    margin-top: 9.5mm;
+    margin-left: 10.5mm;
+    margin-bottom: 9.5mm;
+    margin-right: 10.5mm;
+}
+
+.dotsContainer {
+    display: grid;
+    grid-gap: 5mm 5mm;
+    grid-template-areas: /* etikettenpattern 13x19*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 1*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 2*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 3*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 4*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 5*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 6*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 7*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 8*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 9*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 10*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 11*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 12*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 13*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 14*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 15*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 16*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 17*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot' /* 13 in a row 18*/
+        'dot dot dot dot dot dot dot dot dot dot dot dot dot'; /* 13 in a row 19*/
+    width: 100%;
+    height: 100%;
+
+}
+.serialDots > div{
+    text-align: center;
+    font-size: auto;
+    grid-area: dot;
+    width: 10cm;
+    max-width: 10cm;
+    display: inline-block;    
+}
+.input {
+    display:none;
+}
+
+}
+
+@media screen {
+.input {
+    display: block;
+}    
+}
